@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --bg-dark-color: #0f0e17;
+  --bg-light-color: #fffffe;
+  --btton-bg: #ff8906;
+  --second-color: #f25f4c;
+  --btton-text: #fffffe;
+  --form-container-bg: #72727264;
+  --error-color:#CF0A0A;
+  --font-size: font-size: 15px;
+  --font-weight: 500;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url("https://images.squarespace-cdn.com/content/v1/5dc478803933103936d97c7d/1649710891464-ZQMDMRP6HOYQNVNOHXPT/Black+Background.jpeg?format=2500w");
+  background-position: center;
+  background-size: cover;
+}
+
+.color-change{
+  background-color: var(--btton-bg);
+}
+
+.error-background{
+  background-color: var(--error-color);
+}
+
+.border-error{
+  border-color: var(--error-color);
+
+}
+
+.form__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  height: 600px;
+  gap: 5px;
+  background-color: var(--form-container-bg);
+}
+
+#input-number {
+  width: 200px;
+  height: 35px;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  border: 1px solid var(--btton-bg);
+  background-color: var(--bg-dark-color);
+  color: var(--btton-text);
+  padding-left: 10px;
+}
+
+#search_form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+#search_form label{
+  font-size: 25px;
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#input-button {
+  background-color: #ff8906;
+  border: none;
+  width: 100px;
+  height: 35px;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  color: var(--btton-text);
+}
+
+#input-button:hover,
+#input-number:hover{
+  border:1px solid var(--btton-text);
+}
+
+#input-button:active{
+  border: 3px solid var(--btton-text);
+}
+
+#message__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  color: var(--btton-text);
+  width: 400px;
+  height: 500px;
+  text-align: center;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  border-radius: 10px;
+}
+
+#message__container img{
+  object-fit:cover;
+  object-position: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+  display: none;
+}
+
+#message__container li{
+  list-style-type: none;
+  text-decoration:underline
+}
+
+#message__container ul{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#message__container p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
