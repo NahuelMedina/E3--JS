@@ -20,14 +20,14 @@ class Pizza {
 const pizzas = [
   {
     id: 1,
-    img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/133/466/products/copia-de-pizza-mozarella1-f27baa3e01887f9e6416299067526593-640-0.jpg",
+    img: "/assets/img/pizzaMozarella.jpg",
     nombre: "Muzzarella",
     ingredientes: ["Queso muzzarella", "Tomate"],
     precio: 1200,
   },
   {
     id: 2,
-    img: "https://www.doctoradriancormillot.com/cor4578/wp-content/uploads/2014/04/pizza-napolitana.jpg",
+    img: "/assets/img/pizzaNapolitana.jpg",
     nombre: "Napolitana",
     ingredientes: [
       "Queso muzzarella",
@@ -40,28 +40,28 @@ const pizzas = [
   },
   {
     id: 3,
-    img: "https://www.rebanando.com/uploads/media/5218-pizza-micro-jam-n-y-qu500x500.jpg?1393192374",
+    img: "/assets/img/pizzaJamon.jpg",
     nombre: "Jamon",
     ingredientes: ["Queso muzzarella", "Tomate", "Jamon"],
     precio: 1440,
   },
   {
     id: 4,
-    img: "https://cocinerosargentinos.com/content/recipes/500x500/recipes.12050.jpeg",
+    img: "/assets/img/pizzaFugazzeta.jpeg",
     nombre: "Fugazzeta",
     ingredientes: ["Queso muzzarella", "Cebolla", "Aceitunas"],
     precio: 1440,
   },
   {
     id: 5,
-    img: "https://www.receitasdemae.com.br/wp-content/uploads/2022/02/Pizza-de-calabresa.jpg",
+    img: "/assets/img/pizzaCalabresa.jpg",
     nombre: "Calabresa",
     ingredientes: ["Queso muzzarella", "Longaniza calabresa", "Tomate"],
     precio: 1500,
   },
   {
     id: 6,
-    img: "https://www.clarin.com/img/2021/11/16/YcExTBfAe_340x340__1.jpg",
+    img: "/assets/img/pizzaJamonYMorron.jpg",
     nombre: "Jamon y morron",
     ingredientes: ["Queso muzzarella", "Jamon", "Morron", "Tomate"],
     precio: 1500,
