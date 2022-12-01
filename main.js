@@ -10,6 +10,7 @@ const pContainer = document.querySelector("#message__container p");
 class Pizza {
   constructor(id, nombre, ingredientes, precio) {
     this.id = id;
+    this.img = img;
     this.nombre = nombre;
     this.ingredientes = ingredientes;
     this.precio = precio;
@@ -19,12 +20,14 @@ class Pizza {
 const pizzas = [
   {
     id: 1,
+    img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/133/466/products/copia-de-pizza-mozarella1-f27baa3e01887f9e6416299067526593-640-0.jpg",
     nombre: "Muzzarella",
     ingredientes: ["Queso muzzarella", "Tomate"],
     precio: 1200,
   },
   {
     id: 2,
+    img: "https://www.doctoradriancormillot.com/cor4578/wp-content/uploads/2014/04/pizza-napolitana.jpg",
     nombre: "Napolitana",
     ingredientes: [
       "Queso muzzarella",
@@ -37,24 +40,28 @@ const pizzas = [
   },
   {
     id: 3,
+    img: "https://www.rebanando.com/uploads/media/5218-pizza-micro-jam-n-y-qu500x500.jpg?1393192374",
     nombre: "Jamon",
     ingredientes: ["Queso muzzarella", "Tomate", "Jamon"],
     precio: 1440,
   },
   {
     id: 4,
+    img: "https://cocinerosargentinos.com/content/recipes/500x500/recipes.12050.jpeg",
     nombre: "Fugazzeta",
     ingredientes: ["Queso muzzarella", "Cebolla", "Aceitunas"],
     precio: 1440,
   },
   {
     id: 5,
+    img: "https://www.receitasdemae.com.br/wp-content/uploads/2022/02/Pizza-de-calabresa.jpg",
     nombre: "Calabresa",
     ingredientes: ["Queso muzzarella", "Longaniza calabresa", "Tomate"],
     precio: 1500,
   },
   {
     id: 6,
+    img: "https://www.clarin.com/img/2021/11/16/YcExTBfAe_340x340__1.jpg",
     nombre: "Jamon y morron",
     ingredientes: ["Queso muzzarella", "Jamon", "Morron", "Tomate"],
     precio: 1500,
@@ -109,45 +116,11 @@ const renderResult = (pizza) => {
     const ingredientes = pizza.ingredientes
       .map((pizza) => `<li>${pizza}</li>`)
       .join("");
-    const renderIngredientes =
+    const renderAll =
       (ulContainer.innerHTML = `<h4>📄 Ingredientes:</h4> ${ingredientes}`);
-
-    const renderNombre =
-      (h2Container.textContent = `🍕 Pizza: ${pizza.nombre}`);
-
-    const renderPrecio =
-      (h3Container.textContent = `💲 Precio: ${pizza.precio}`);
-
-    if (pizza.id === 1) {
-      mostrarImg;
-      imgContainer.src =
-        "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/133/466/products/copia-de-pizza-mozarella1-f27baa3e01887f9e6416299067526593-640-0.jpg";
-    }
-    if (pizza.id === 2) {
-      mostrarImg;
-      imgContainer.src =
-        "https://www.doctoradriancormillot.com/cor4578/wp-content/uploads/2014/04/pizza-napolitana.jpg";
-    }
-    if (pizza.id === 3) {
-      mostrarImg;
-      imgContainer.src =
-        "https://www.rebanando.com/uploads/media/5218-pizza-micro-jam-n-y-qu500x500.jpg?1393192374";
-    }
-    if (pizza.id === 4) {
-      mostrarImg;
-      imgContainer.src =
-        "https://cocinerosargentinos.com/content/recipes/500x500/recipes.12050.jpeg";
-    }
-    if (pizza.id === 5) {
-      mostrarImg;
-      imgContainer.src =
-        "https://www.receitasdemae.com.br/wp-content/uploads/2022/02/Pizza-de-calabresa.jpg";
-    }
-    if (pizza.id === 6) {
-      mostrarImg;
-      imgContainer.src =
-        "https://www.clarin.com/img/2021/11/16/YcExTBfAe_340x340__1.jpg";
-    }
+    h2Container.textContent = `🍕 Pizza: ${pizza.nombre}`;
+    h3Container.textContent = `💲 Precio: ${pizza.precio}`;
+    imgContainer.src = `${pizza.img}`;
   }
   changeColorBackground();
   clearError();
