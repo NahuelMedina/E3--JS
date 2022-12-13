@@ -129,6 +129,7 @@ const renderResult = (pizza) => {
 };
 
 const saveToLocalStorage = (card) => {
+  if (!card) return;
   localStorage.setItem("card", JSON.stringify(card));
 };
 
